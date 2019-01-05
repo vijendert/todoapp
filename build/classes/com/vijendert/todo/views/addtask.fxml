@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addtask_anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="813.0" prefWidth="1800.0" style="-fx-background-color: #7ed3d0; -fx-background-radius: 40;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vijendert.todo.controllers.AddTaskController">
+    <children>
+        <TableView fx:id="todo_table" layoutX="23.0" layoutY="39.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1307.0" style="-fx-background-color: #429693; -fx-background-radius: 20;">
+            <effect>
+                <DropShadow />
+            </effect>
+            <stylesheets>
+                <URL value="@../style.css" />
+            </stylesheets>
+        </TableView>
+        <AnchorPane layoutX="1369.0" layoutY="39.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="401.0" style="-fx-background-color: #429693; -fx-background-radius: 20;">
+            <children>
+                <AnchorPane fx:id="schedule_pane" layoutX="8.0" layoutY="296.0" prefHeight="235.0" prefWidth="385.0" style="-fx-background-color: #429693; -fx-background-radius: 40;" visible="false">
+                    <children>
+                        <JFXButton fx:id="schedule_task_btn" buttonType="RAISED" layoutX="25.0" layoutY="154.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 40;" text="SCHEDULE" textFill="WHITE">
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="mark_complete_btn" buttonType="RAISED" layoutX="190.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 40;" text="MARK COMPLETE" textFill="WHITE">
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXTimePicker fx:id="start_time_picker" defaultColor="#1d4f4d" editable="true" layoutX="48.0" layoutY="69.0" prefHeight="31.0" prefWidth="290.0" promptText="Start Time" />
+                        <JFXDatePicker fx:id="start_date_picker" defaultColor="#1d4f4d" layoutX="48.0" layoutY="19.0" prefHeight="31.0" prefWidth="290.0" promptText="Start Date" />
+                        <JFXCheckBox fx:id="reminder_chk" checkedColor="WHITE" layoutX="59.0" layoutY="118.0" style="-fx-background-color: #1d4f4d;" text="Remind" textFill="WHITE" unCheckedColor="WHITE">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </JFXCheckBox>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </AnchorPane>
+                <JFXTextArea fx:id="notes_txt" focusColor="WHITE" labelFloat="true" layoutX="56.0" layoutY="123.0" prefHeight="83.0" prefWidth="290.0" promptText="Notes" style="-fx-background-color: #1d4f4d; -fx-text-inner-color: #ffffff; -fx-prompt-text-fill: #ffffff;" unFocusColor="WHITE" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXTextArea>
+                <JFXTextArea fx:id="description_txt" focusColor="WHITE" labelFloat="true" layoutX="54.0" layoutY="35.0" prefHeight="68.0" prefWidth="290.0" promptText="Description" style="-fx-background-color: #1d4f4d; -fx-text-inner-color: #ffffff; -fx-prompt-text-fill: #ffffff;" unFocusColor="WHITE" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXTextArea>
+                <JFXCheckBox fx:id="achievement_chk" checkedColor="WHITE" layoutX="56.0" layoutY="241.0" style="-fx-background-color: #1d4f4d;" text="Mark Achievement" textFill="WHITE" unCheckedColor="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXCheckBox>
+                <AnchorPane fx:id="addtask_pane" layoutX="7.0" layoutY="296.0" prefHeight="158.0" prefWidth="385.0" style="-fx-background-color: #429693; -fx-background-radius: 40;">
+                    <children>
+                        <GridPane layoutX="-7.0" layoutY="59.0" prefHeight="30.0" prefWidth="382.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <JFXButton fx:id="add_btn" prefHeight="67.0" prefWidth="83.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 20;" text="ADD" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="delete_btn" prefHeight="67.0" prefWidth="83.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 20;" text="DELETE" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="edit_btn" prefHeight="67.0" prefWidth="83.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 20;" text="EDIT" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </JFXButton>
+                                <JFXButton fx:id="clear_btn" prefHeight="67.0" prefWidth="83.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 20;" text="CLEAR" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </JFXButton>
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </AnchorPane>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+        <GridPane layoutX="538.0" layoutY="684.0" prefHeight="57.0" prefWidth="800.0">
+            <children>
+                <JFXButton fx:id="add_task_btn" buttonType="RAISED" prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 40;" text="ADD TASK" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="sync_btn" buttonType="RAISED" layoutX="10.0" layoutY="14.0" prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 40;" text="SYNC" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="schedule_btn" buttonType="RAISED" prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 40;" text="SCHEDULE" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="view_btn" buttonType="RAISED" prefHeight="50.0" prefWidth="190.0" style="-fx-background-color: #1d4f4d; -fx-background-radius: 40;" text="VIEW" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </JFXButton>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+    </children>
+</AnchorPane>

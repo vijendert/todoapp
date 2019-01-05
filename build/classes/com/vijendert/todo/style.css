@@ -1,0 +1,54 @@
+.table-view {
+    -fx-base:  #1d4f4d;
+    -fx-control-inner-background:  #1d4f4d;
+    -fx-background-color:  #1d4f4d;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color:
+            #1d4f4d
+            #1d4f4d
+            #1d4f4d;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+
+.jfx-date-picker > .jfx-text-field { -fx-text-inner-color: WHITE;
+                                     -fx-font-weight: bold;
+ }
+
+ .jfx-time-picker > .jfx-text-field { -fx-text-inner-color: WHITE;
+                                     -fx-font-weight: bold;
+ }
+ 
+
+
+.jfx-combo-box {
+	-fx-background-color:   #1d4f4d;
+        -fx-font-weight: bold;
+        -fx-text-fill: white;
+        -fx-prompt-text-fill: white ;
+}
+
+ 
+ 

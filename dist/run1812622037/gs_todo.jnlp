@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="gs_todo.jnlp">
+  <information>
+    <title>gs_todo</title>
+    <vendor>vijen</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\gs_todo-Preloader.jar" size="3009" download="progress" />
+    <jar href="gs_todo.jar" size="53088" download="eager" />
+    <jar href="lib\apache-commons.jar" size="857029" download="eager" />
+    <jar href="lib\commons-collections4-4.2.jar" size="752798" download="eager" />
+    <jar href="lib\commons-compress-1.18.jar" size="591748" download="eager" />
+    <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
+    <jar href="lib\poi-4.0.1.jar" size="2718209" download="eager" />
+    <jar href="lib\poi-examples-4.0.1.jar" size="424225" download="eager" />
+    <jar href="lib\poi-excelant-4.0.1.jar" size="31336" download="eager" />
+    <jar href="lib\poi-ooxml-4.0.1.jar" size="1766188" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-4.0.1.jar" size="7771088" download="eager" />
+    <jar href="lib\poi-scratchpad-4.0.1.jar" size="1383430" download="eager" />
+    <jar href="lib\resolver.jar" size="60047" download="eager" />
+    <jar href="lib\xbean.jar" size="2572733" download="eager" />
+    <jar href="lib\xbean_xpath.jar" size="6756" download="eager" />
+    <jar href="lib\xmlpublic.jar" size="442017" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="gs_todo" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="com.vijendert.todo.Main"  name="gs_todo"  preloader-class="gs_todo.preloader.gs_todo_Preloader"/>
+  <update check="always"/>
+</jnlp>

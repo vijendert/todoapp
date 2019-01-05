@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:id="loader_anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="813.0" prefWidth="1800.0" style="-fx-background-color: #7ed3d0; -fx-background-radius: 40;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vijendert.todo.controllers.MainLoaderController">
+   <children>
+      <JFXSpinner layoutX="742.0" layoutY="382.0" minHeight="-Infinity" minWidth="-Infinity" />
+   </children>
+</AnchorPane>
